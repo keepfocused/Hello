@@ -21,4 +21,13 @@ public func routes(_ router: Router) throws {
         
         return "Hello, \(name)"
     }
+    
+    router.post(InfoData.self, at: "info") { (req, data) -> InfoResponse in
+        return InfoResponse(request: data)
+    }
+ 
+    
+
+    
+   
 }
